@@ -1,20 +1,9 @@
 import Card from "@material-tailwind/react/Card";
-import CardHeader from "@material-tailwind/react/CardHeader";
 import CardBody from "@material-tailwind/react/CardBody";
 import Button from "@material-tailwind/react/Button";
-import Image from "@material-tailwind/react/Image";
-import Progress from "@material-tailwind/react/Progress";
 import Icon from "@material-tailwind/react/Icon";
 import InputIcon from "@material-tailwind/react/InputIcon";
-import Dropdown from "@material-tailwind/react/Dropdown";
-import DropdownItem from "@material-tailwind/react/DropdownItem";
-import DropdownLink from "@material-tailwind/react/DropdownLink";
 import CardFooter from "@material-tailwind/react/CardFooter";
-import Label from "@material-tailwind/react/Label";
-import Team1 from "../assets/img/team-1-800x800.jpg";
-import Team2 from "../assets/img/team-2-800x800.jpg";
-import Team3 from "../assets/img/team-3-800x800.jpg";
-import Team4 from "../assets/img/team-4-470x470.png";
 import Pager from "./pagers";
 
 export default function Table({ setShowOutletDetail, showOutletDetail }) {
@@ -23,31 +12,32 @@ export default function Table({ setShowOutletDetail, showOutletDetail }) {
       <Card>
         <CardBody>
           <div className="overflow-x-auto">
-            <div className="flex flex-row gap-x-60 justify-between">
-              <InputIcon
-                type="text"
-                color="lightBlue"
-                size="regular"
-                outline={true}
-                placeholder="Search"
-                iconFamily="material-icons"
-                iconName="search"
-              />
-              <div className="flex flex-row justify-evenly">
-                <Button
+            <div className="flex flex-row justify-between">
+              <div className="w-56">
+                <InputIcon
+                  type="text"
                   color="lightBlue"
-                  buttonType="filled"
                   size="regular"
-                  rounded={false}
-                  block={false}
-                  iconOnly={false}
-                  ripple="light"
-                  onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-                >
-                  <Icon name="add" />
-                  Add New Equipment
-                </Button>
+                  outline={true}
+                  placeholder="Search"
+                  iconFamily="material-icons"
+                  iconName="search"
+                />
               </div>
+
+              <Button
+                color="lightBlue"
+                buttonType="filled"
+                size="regular"
+                rounded={false}
+                block={false}
+                iconOnly={false}
+                ripple="light"
+                onClick={(e) => setShowOutletDetail(!showOutletDetail)}
+              >
+                <Icon name="add" />
+                Add New Equipment
+              </Button>
             </div>
             <table className="items-center w-full bg-transparent border-collapse">
               <thead>

@@ -8,11 +8,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Sidebar />
-      <div className="flex flex-row">
-        <div className="container md:ml-64">
-          <AdminNavbar />
-          <div className="flex flex-row">{children}</div>
-        </div>
+      <div className="container md:ml-48">
+        <AdminNavbar />
+        <div className="flex flex-row">{children}</div>
       </div>
     </>
   );

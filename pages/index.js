@@ -18,9 +18,7 @@ export default function Home() {
             setShowOutletDetail={setShowOutletDetail}
             showOutletDetail={showOutletDetail}
           />,
-          <div className="basis-4/12">
-            <OutLetEdit showOutletDetail={showOutletDetail} />
-          </div>,
+          <OutLetEdit showOutletDetail={showOutletDetail} />,
         ]}
       ></Layout>
     </>

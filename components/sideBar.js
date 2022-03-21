@@ -5,11 +5,10 @@ import H6 from "@material-tailwind/react/Heading6";
 import Link from "next/link";
 
 export default function Sidebar() {
-  const [showSidebar, setShowSidebar] = useState("-left-64");
   return (
     <>
       <div
-        className={`h-screen fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
+        className={`h-screen fixed top-0 md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-48 z-10 py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <a
@@ -32,7 +31,7 @@ export default function Sidebar() {
                 <Link href="/">
                   <a>
                     <Icon name="dashboard" size="2xl" />
-                    Dashboard
+                    <span className="align-top">Dashboard</span>
                   </a>
                 </Link>
               </li>
@@ -40,7 +39,7 @@ export default function Sidebar() {
                 <Link href="/settings">
                   <a>
                     <Icon name="settings" size="2xl" />
-                    Settings
+                    <span className="align-top">Settings</span>
                   </a>
                 </Link>
               </li>
@@ -48,7 +47,7 @@ export default function Sidebar() {
                 <Link href="/tables">
                   <a>
                     <Icon name="toc" size="2xl" />
-                    Tables
+                    <span className="align-top">Tables</span>
                   </a>
                 </Link>
               </li>
@@ -56,7 +55,7 @@ export default function Sidebar() {
                 <Link href="/maps">
                   <a>
                     <Icon name="map" size="2xl" />
-                    Maps
+                    <span className="align-top">Maps</span>
                   </a>
                 </Link>
               </li>
