@@ -1,14 +1,13 @@
 import { useState } from "react";
 import AdminNavbar from "./adminNav";
 import Icon from "@material-tailwind/react/Icon";
-import H6 from "@material-tailwind/react/Heading6";
 import Link from "next/link";
 
 export default function Sidebar() {
   return (
     <>
       <div
-        className={`h-screen fixed top-0 md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-48 z-10 py-4 px-6 transition-all duration-300`}
+        className={`fixed top-0 bottom-0 md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-48 z-10 py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <a
@@ -17,11 +16,10 @@ export default function Sidebar() {
             rel="noreferrer"
             className="mt-2 w-full inline-block"
           >
-            <H6 color="gray">
-              Welcome,
-              <br />
-              Admin
-            </H6>
+            <h4 className="text-black mt-3 mb-6">
+              <b>Welcome,</b>
+              <br /> Admin
+            </h4>
           </a>
           <div className="flex flex-col">
             <hr className="my-4 min-w-full" />
@@ -31,7 +29,7 @@ export default function Sidebar() {
                 <Link href="/">
                   <a>
                     <Icon name="groups" size="2xl" />
-                    <span className="align-top">Customer</span>
+                    <span className="align-top pl-4">Customer</span>
                   </a>
                 </Link>
               </li>
@@ -39,7 +37,7 @@ export default function Sidebar() {
                 <Link href="/settings">
                   <a>
                     <Icon name="work" size="2xl" />
-                    <span className="align-top">Outlet</span>
+                    <span className="align-top pl-4">Outlet</span>
                   </a>
                 </Link>
               </li>
@@ -47,7 +45,7 @@ export default function Sidebar() {
                 <Link href="/tables">
                   <a>
                     <Icon name="handyman" size="2xl" />
-                    <span className="align-top">Equipment</span>
+                    <span className="align-top pl-4">Equipment</span>
                   </a>
                 </Link>
               </li>
@@ -55,7 +53,7 @@ export default function Sidebar() {
                 <Link href="/maps">
                   <a>
                     <Icon name="person" size="2xl" />
-                    <span className="align-top">Users</span>
+                    <span className="align-top pl-4">Users</span>
                   </a>
                 </Link>
               </li>
@@ -63,7 +61,7 @@ export default function Sidebar() {
                 <Link href="/maps">
                   <a>
                     <Icon name="wallet" size="2xl" />
-                    <span className="align-top">Biling</span>
+                    <span className="align-top pl-4">Biling</span>
                   </a>
                 </Link>
               </li>
@@ -71,7 +69,7 @@ export default function Sidebar() {
                 <Link href="/maps">
                   <a>
                     <Icon name="more_horiz" size="2xl" />
-                    <span className="align-top">More Outlet</span>
+                    <span className="align-top pl-4">More Outlet</span>
                   </a>
                 </Link>
               </li>

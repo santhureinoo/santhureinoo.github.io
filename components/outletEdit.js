@@ -1,13 +1,9 @@
-import Card from "@material-tailwind/react/Card";
-import CardBody from "@material-tailwind/react/CardBody";
 import Input from "@material-tailwind/react/Input";
 import Button from "@material-tailwind/react/Button";
 import Dropdown from "@material-tailwind/react/Dropdown";
 import DropdownItem from "@material-tailwind/react/DropdownItem";
 import DropdownLink from "@material-tailwind/react/DropdownLink";
 import Small from "@material-tailwind/react/Small";
-import H6 from "@material-tailwind/react/Heading6";
-
 export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
   return (
     <>
@@ -22,11 +18,11 @@ export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
       )}
       <div className={`top-0 bottom-0 right-0 w-[35vw] overflow-auto bg-white p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${showOutletDetail ? "translate-x-0 " : "translate-x-full"}`}>
         <form>
-        <H6 color="gray">
-          Equipment,
-              <br />
-              Information
-            </H6>
+          <Dropdown></Dropdown>
+          <h6 className="text-black text-sm mt-3 mb-6 uppercase">
+            <b>Equipment</b>
+            <br /> Information
+          </h6>
           <div className="flex flex-wrap mt-10 items-end">
             <div className="w-full lg:w-4/12 pr-4 mb-10 font-light">
               <Small color="gray">Equipment ID</Small>
@@ -79,7 +75,7 @@ export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
               <Input type="text" size="regular" outline={true} />
             </div>
           </div>
-          <h6 className="text-purple-500 text-sm mt-3 mb-6 font-light uppercase">
+          <h6 className="text-black text-sm mt-3 mb-6 uppercase">
             <b>Energy</b>
             <br /> Information
           </h6>
@@ -99,7 +95,7 @@ export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
           </div>
 
           <div className="flex flex-row justify-between">
-            <h6 className="text-purple-500 text-sm mt-3 mb-6 font-light uppercase">
+            <h6 className="text-black text-sm mt-3 mb-6 uppercase">
               <b>Device</b>
             </h6>
             <h5 className="text-gray-500 text-sm mt-3 mb-6 font-light uppercase">

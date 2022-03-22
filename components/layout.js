@@ -6,10 +6,10 @@ import AdminNavbar from "../components/adminNav";
 
 export default function Layout({ children }) {
   return (
-    <> 
+    <>
       <AdminNavbar />
+      <Sidebar />
       <div className="container max-w-full flex md:pl-48">
-        <Sidebar />
         {children}
       </div>
     </>
