@@ -28,9 +28,10 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - run: npm install
-      - run: npm run export
+      - run: npm run build
         env:
             CI: true
+      - run: npm run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
