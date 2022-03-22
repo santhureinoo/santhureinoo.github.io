@@ -6,6 +6,7 @@ import Dropdown from "@material-tailwind/react/Dropdown";
 import DropdownItem from "@material-tailwind/react/DropdownItem";
 import DropdownLink from "@material-tailwind/react/DropdownLink";
 import Small from "@material-tailwind/react/Small";
+import H6 from "@material-tailwind/react/Heading6";
 
 export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
   return (
@@ -21,10 +22,11 @@ export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
       )}
       <div className={`top-0 bottom-0 right-0 w-[35vw] overflow-auto bg-white p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${showOutletDetail ? "translate-x-0 " : "translate-x-full"}`}>
         <form>
-          <h6 className="text-purple-500 text-sm mt-3 mb-6 font-light uppercase">
-            <b>Equipment</b>
-            <br /> Information
-          </h6>
+        <H6 color="gray">
+          Equipment,
+              <br />
+              Information
+            </H6>
           <div className="flex flex-wrap mt-10 items-end">
             <div className="w-full lg:w-4/12 pr-4 mb-10 font-light">
               <Small color="gray">Equipment ID</Small>
