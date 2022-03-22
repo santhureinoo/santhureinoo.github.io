@@ -8,9 +8,8 @@ export default function Layout({ children }) {
   return (
     <>
       <Sidebar />
-      <div className="container md:ml-48">
-        <AdminNavbar />
-        <div className="flex flex-row">{children}</div>
+      <div className="container max-w-full flex  md:ml-48">
+        {children}
       </div>
     </>
   );

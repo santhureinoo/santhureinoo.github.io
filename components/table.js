@@ -5,8 +5,53 @@ import Icon from "@material-tailwind/react/Icon";
 import InputIcon from "@material-tailwind/react/InputIcon";
 import CardFooter from "@material-tailwind/react/CardFooter";
 import Pager from "./pagers";
+import OutLetEdit from "./outletEdit";
+import React from "react";
+import {DummyTableData} from "../common/constant";
 
-export default function Table({ setShowOutletDetail, showOutletDetail }) {
+export default function Table() {
+  const [showOutletDetail, setShowOutletDetail] = React.useState(false);
+  function getTableRows() {
+    const rows = [];
+    for (var i = 0; i < 15; i++) {
+      rows.push(<tr>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          {DummyTableData.EID}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          {DummyTableData.Customer}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          <i className="fas fa-circle fa-sm text-orange-500 mr-2"></i>
+          {DummyTableData.Outlet}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          <i className="fas fa-circle fa-sm text-orange-500 mr-2"></i>
+          {DummyTableData.EType}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          <i className="fas fa-circle fa-sm text-orange-500 mr-2"></i>
+          {DummyTableData.EName}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          <i className="fas fa-circle fa-sm text-orange-500 mr-2"></i>
+          {DummyTableData.ValidAsOf}
+        </th>
+        <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
+          <Button
+            buttonType="link"
+            size="sm"
+            ripple="dark"
+            onClick={(e) => setShowOutletDetail(!showOutletDetail)}
+          >
+            <Icon name={"menu"}></Icon>
+          </Button>
+        </th>
+      </tr>
+      )
+    }
+    return rows;
+  }
   return (
     <>
       <Card>
@@ -42,108 +87,29 @@ export default function Table({ setShowOutletDetail, showOutletDetail }) {
             <table className="items-center w-full bg-transparent border-collapse">
               <thead>
                 <tr>
-                  <th className="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
-                    Project
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Equipment ID
                   </th>
-                  <th className="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
-                    Budget
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Customer
                   </th>
-                  <th className="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
-                    Status
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Outlet
                   </th>
-                  <th className="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left"></th>
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Equipment Type
+                  </th>
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Equipment Name
+                  </th>
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left">
+                    Valid as Of
+                  </th>
+                  <th className="px-2 text-gray-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left"></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    Argon Design System
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    $2,500 USD
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <i className="fas fa-circle fa-sm text-orange-500 mr-2"></i>{" "}
-                    pending
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <Button
-                      buttonType="link"
-                      size="sm"
-                      ripple="dark"
-                      onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-                    >
-                      <Icon name={"menu"}></Icon>
-                    </Button>
-                  </th>
-                </tr>
-                <tr>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    Black Dashboard Sketch
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    $1,800 USD
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <i className="fas fa-circle fa-sm text-blue-gray-900 mr-2"></i>{" "}
-                    completed
-                  </th>
-
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <Button
-                      buttonType="link"
-                      size="sm"
-                      ripple="dark"
-                      onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-                    >
-                      <Icon name={"menu"}></Icon>
-                    </Button>
-                  </th>
-                </tr>
-                <tr>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    React Material Dashboard
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    $4,400 USD
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <i className="fas fa-circle fa-sm text-teal-500 mr-2"></i>{" "}
-                    on schedule
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <Button
-                      buttonType="link"
-                      size="sm"
-                      ripple="dark"
-                      onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-                    >
-                      <Icon name={"menu"}></Icon>
-                    </Button>
-                  </th>
-                </tr>
-                <tr>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    React Material Dashboard
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    $2,200 USD
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <i className="fas fa-circle fa-sm text-blue-gray-900 mr-2"></i>{" "}
-                    completed
-                  </th>
-                  <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-                    <Button
-                      buttonType="link"
-                      size="sm"
-                      ripple="dark"
-                      onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-                    >
-                      <Icon name={"menu"}></Icon>
-                    </Button>
-                  </th>
-                </tr>
+                {getTableRows()}
               </tbody>
             </table>
           </div>
@@ -154,6 +120,7 @@ export default function Table({ setShowOutletDetail, showOutletDetail }) {
           </div>
         </CardFooter>
       </Card>
+      <OutLetEdit setShowOutletDetail={setShowOutletDetail} showOutletDetail={showOutletDetail}></OutLetEdit>
     </>
   );
 }

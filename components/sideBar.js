@@ -7,6 +7,7 @@ import Link from "next/link";
 export default function Sidebar() {
   return (
     <>
+      <AdminNavbar />
       <div
         className={`h-screen fixed top-0 md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-48 z-10 py-4 px-6 transition-all duration-300`}
       >

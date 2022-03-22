@@ -1,11 +1,7 @@
-import OutLetEdit from "../components/outletEdit";
-import Sidebar from "../components/sideBar";
 import Table from "../components/table";
-import React from "react";
 import Layout from "../components/layout";
 
 export default function Home() {
-  const [showOutletDetail, setShowOutletDetail] = React.useState(false);
   return (
     <>
       <link
@@ -13,13 +9,12 @@ export default function Home() {
         rel="stylesheet"
       />
       <Layout
-        children={[
-          <Table
-            setShowOutletDetail={setShowOutletDetail}
-            showOutletDetail={showOutletDetail}
-          />,
-          <OutLetEdit showOutletDetail={showOutletDetail} setShowOutletDetail={setShowOutletDetail} />,
-        ]}
+        children={
+          <div className="flex-1"> 
+              <Table/>
+          </div>
+
+        }
       ></Layout>
     </>
   );
