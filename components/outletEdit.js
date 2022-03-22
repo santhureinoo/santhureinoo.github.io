@@ -7,16 +7,25 @@ import DropdownItem from "@material-tailwind/react/DropdownItem";
 import DropdownLink from "@material-tailwind/react/DropdownLink";
 import Small from "@material-tailwind/react/Small";
 
-export default function OutLetEdit({ showOutletDetail }) {
+export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
   return (
-    <Card className={showOutletDetail ? "hidden" : ""}>
-      <CardBody>
+    <>
+      {showOutletDetail && (
+        <button
+          className="flex text-4xl text-black items-center cursor-pointer fixed right-10 top-6 z-50"
+          onClick={() => setShowOutletDetail(!showOutletDetail)}
+        >
+          x
+        </button>
+
+      )}
+      <div className={`top-0 bottom-0 right-0 w-[35vw] overflow-auto bg-white p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${showOutletDetail ? "translate-x-0 " : "translate-x-full"}`}>
         <form>
           <h6 className="text-purple-500 text-sm mt-3 mb-6 font-light uppercase">
             <b>Equipment</b>
             <br /> Information
           </h6>
-          <div className="flex flex-wrap mt-10">
+          <div className="flex flex-wrap mt-10 items-end">
             <div className="w-full lg:w-4/12 pr-4 mb-10 font-light">
               <Small color="gray">Equipment ID</Small>
               <Input
@@ -159,7 +168,6 @@ export default function OutLetEdit({ showOutletDetail }) {
             </div>
           </div>
         </form>
-      </CardBody>
-    </Card>
+      </div></>
   );
 }
