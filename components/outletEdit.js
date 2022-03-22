@@ -1,6 +1,5 @@
 import Input from "@material-tailwind/react/Input";
 import Button from "@material-tailwind/react/Button";
-import Dropdown from "@material-tailwind/react/Dropdown";
 import DropdownItem from "@material-tailwind/react/DropdownItem";
 import DropdownLink from "@material-tailwind/react/DropdownLink";
 import Small from "@material-tailwind/react/Small";
@@ -18,7 +17,6 @@ export default function OutLetEdit({ showOutletDetail, setShowOutletDetail }) {
       )}
       <div className={`top-0 bottom-0 right-0 w-[35vw] overflow-auto bg-white p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-300 ${showOutletDetail ? "translate-x-0 " : "translate-x-full"}`}>
         <form>
-          <Dropdown></Dropdown>
           <h6 className="text-black text-sm mt-3 mb-6 uppercase">
             <b>Equipment</b>
             <br /> Information
