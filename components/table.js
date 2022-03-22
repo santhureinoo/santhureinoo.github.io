@@ -7,7 +7,7 @@ import CardFooter from "@material-tailwind/react/CardFooter";
 import Pager from "./pagers";
 import OutLetEdit from "./outletEdit";
 import React from "react";
-import {DummyTableData} from "../common/constant";
+import { DummyTableData } from "../common/constant";
 
 export default function Table() {
   const [showOutletDetail, setShowOutletDetail] = React.useState(false);
@@ -38,14 +38,9 @@ export default function Table() {
           {DummyTableData.ValidAsOf}
         </th>
         <th className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left">
-          <Button
-            buttonType="link"
-            size="sm"
-            ripple="dark"
-            onClick={(e) => setShowOutletDetail(!showOutletDetail)}
-          >
-            <Icon name={"menu"}></Icon>
-          </Button>
+          <button onClick={(e) => setShowOutletDetail(!showOutletDetail)}  className="bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+          <Icon name={"more_verti"}></Icon>
+          </button>
         </th>
       </tr>
       )

@@ -7,7 +7,6 @@ import Link from "next/link";
 export default function Sidebar() {
   return (
     <>
-      <AdminNavbar />
       <div
         className={`h-screen fixed top-0 md:left-0 overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-48 z-10 py-4 px-6 transition-all duration-300`}
       >
@@ -31,32 +30,48 @@ export default function Sidebar() {
               <li className="rounded-lg mb-4">
                 <Link href="/">
                   <a>
-                    <Icon name="dashboard" size="2xl" />
-                    <span className="align-top">Dashboard</span>
+                    <Icon name="groups" size="2xl" />
+                    <span className="align-top">Customer</span>
                   </a>
                 </Link>
               </li>
               <li className="rounded-lg mb-2">
                 <Link href="/settings">
                   <a>
-                    <Icon name="settings" size="2xl" />
-                    <span className="align-top">Settings</span>
+                    <Icon name="work" size="2xl" />
+                    <span className="align-top">Outlet</span>
                   </a>
                 </Link>
               </li>
               <li className="rounded-lg mb-2 ">
                 <Link href="/tables">
                   <a>
-                    <Icon name="toc" size="2xl" />
-                    <span className="align-top">Tables</span>
+                    <Icon name="handyman" size="2xl" />
+                    <span className="align-top">Equipment</span>
                   </a>
                 </Link>
               </li>
-              <li className="rounded-lg mb-2 text-gray-700">
+              <li className="rounded-lg mb-2">
                 <Link href="/maps">
                   <a>
-                    <Icon name="map" size="2xl" />
-                    <span className="align-top">Maps</span>
+                    <Icon name="person" size="2xl" />
+                    <span className="align-top">Users</span>
+                  </a>
+                </Link>
+              </li>
+              <li className="rounded-lg mb-2">
+                <Link href="/maps">
+                  <a>
+                    <Icon name="wallet" size="2xl" />
+                    <span className="align-top">Biling</span>
+                  </a>
+                </Link>
+              </li>
+              <li className="rounded-lg mb-2">
+                <Link href="/maps">
+                  <a>
+                    <Icon name="more_horiz" size="2xl" />
+                    <span className="align-top">More Outlet</span>
                   </a>
                 </Link>
               </li>
