@@ -1,5 +1,6 @@
 import Input from "@material-tailwind/react/Input";
 import Button from "@material-tailwind/react/Button";
+import Dropdown from "@material-tailwind/react/Dropdown";
 import DropdownItem from "@material-tailwind/react/DropdownItem";
 import DropdownLink from "@material-tailwind/react/DropdownLink";
 import Small from "@material-tailwind/react/Small";
